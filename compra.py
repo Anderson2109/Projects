@@ -45,6 +45,7 @@ def imprimir_factura():
     print(f"\nSubtotal: RD${subtotal:.2f}")
     print(f"Impuestos (18%): RD${impuestos:.2f}")
     print(f"Total: RD${total:.2f}")
+<<<<<<< HEAD
 
 def main():
     continuar = True
@@ -56,3 +57,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+
+def main():
+    continuar = True
+    while continuar:
+        agregar_producto_al_carrito()
+        respuesta = input("¿Desea agregar otro producto? (s/n): ").strip().lower()
+        continuar = (respuesta == "s")
+    imprimir_factura()
+
+if __name__ == "__main__":
+    main()
+
+>>>>>>> c4ef8992222fcff4abfcde48f8bb88ce07ce25be
