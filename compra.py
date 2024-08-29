@@ -1,5 +1,3 @@
-import os
-
 productos = {
     1: {"descripcion": "Arroz", "precio": 50},
     2: {"descripcion": "Habichuelas", "precio": 80},
@@ -10,79 +8,51 @@ productos = {
 
 carrito = []
 
-def limpiar_pantalla():
-
-    os.system('cls' if os.name == 'nt' else 'clear')
-
 def mostrar_menu():
+    print("Menú:")
+    for id, producto in productos.items():
+        print(f"{id}. {producto['descripcion']} -> RD${producto['precio']}")
 
-    print("Menú de Productos:")
-    for ID in productos:
-        info = productos[ID]
-        print(f"{ID}. {info['descripcion']} -> RD${info['precio']}")
-
-def agregar_producto(ID, cantidad):
-
-    encontrado = False
-    for item in carrito:
-        if item['id'] == ID:
-            item['cantidad'] += cantidad
-            encontrado = True
-            break
-    if not encontrado:
-        carrito.append({
-            'id': ID,
-            'descripcion': productos[ID]['descripcion'],
-            'precio': productos[ID]['precio'],
-            'cantidad': cantidad
-        })
-
-def punto_de_venta():
-    while True:
-        limpiar_pantalla()
-        mostrar_menu()
-        
-        try:
-            id_producto = int(input("Ingrese el ID del producto: "))
-            if id_producto not in productos:
-                print("ID no válido. Intente de nuevo.")
-                continue
-        except ValueError:
-            print("Entrada no válida. Intente de nuevo.")
-            continue
-        
-        try:
-            cantidad = int(input("Ingrese la cantidad: "))
-            if cantidad < 0:
-                print("Cantidad no puede ser negativa. Intente de nuevo.")
-                continue
-        except ValueError:
-            print("Entrada no válida. Intente de nuevo.")
-            continue
-        
-        agregar_producto(id_producto, cantidad)
-        
-        otra_compra = input("¿Desea añadir otro producto? (si/no): ").strip().lower()
-        if otra_compra != 'si':
-            break
-    
-    imprimir_factura()
+def agregar_producto_al_carrito():
+    mostrar_menu()
+    try:
+        id_producto = int(input("Ingrese el ID del producto: "))
+        if id_producto in productos:
+            cantidad = int(input("Ingrese la cantidad del producto: "))
+            if cantidad > 0:
+                for producto in carrito:
+                    if producto["id"] == id_producto:
+                        producto["cantidad"] += cantidad
+                        return
+                carrito.append({"id": id_producto, "descripcion": productos[id_producto]["descripcion"], "precio": productos[id_producto]["precio"], "cantidad": cantidad})
+            else:
+                print("No se permiten cantidades negativas.")
+        else:
+            print("ID de producto no válido.")
+    except ValueError:
+        print("Entrada no válida. Por favor ingrese un número.")
 
 def imprimir_factura():
-    subtotal = 0
-
     print("\nFactura:")
-    print("ID | Descripción   | Precio Unidad | Cantidad | Precio Total")
-    for item in carrito:
-        precio_total = item['precio'] * item['cantidad']
+    print("{:<5} {:<15} {:<15} {:<10} {:<15}".format("ID", "Descripción", "Precio Unitario", "Cantidad", "Precio Total"))
+    subtotal = 0
+    for producto in carrito:
+        precio_total = producto["precio"] * producto["cantidad"]
+        print("{:<5} {:<15} RD${:<13} {:<10} RD${:<15}".format(producto['id'], producto['descripcion'], producto['precio'], producto['cantidad'], precio_total))
         subtotal += precio_total
-        print(f"{item['id']}  | {item['descripcion']:<14} | RD${item['precio']:<12} | {item['cantidad']:<8} | RD${precio_total}")
-    
     impuestos = subtotal * 0.18
     total = subtotal + impuestos
-    
-    print("\nSubtotal: RD$", subtotal)
-    print("Impuestos (18%): RD$", impuestos)
-    print("Total: RD$", total)
+    print(f"\nSubtotal: RD${subtotal:.2f}")
+    print(f"Impuestos (18%): RD${impuestos:.2f}")
+    print(f"Total: RD${total:.2f}")
 
-punto_de_venta()
+def main():
+    continuar = True
+    while continuar:
+        agregar_producto_al_carrito()
+        respuesta = input("¿Desea agregar otro producto? (s/n): ").strip().lower()
+        continuar = (respuesta == "s")
+    imprimir_factura()
+
+if __name__ == "__main__":
+    main()
