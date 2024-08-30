@@ -19,6 +19,9 @@ class Factura:
     contador_id = 1
 
     def __init__(self, cliente):
+
+
+
         self.id = Factura.contador_id
         Factura.contador_id += 1
         self.fecha = datetime.now().strftime('%d/%m/%Y %H:%M')
@@ -54,3 +57,39 @@ class Factura:
         print(f"\nSubtotal: RD${self.calcular_subtotal():.2f}")
         print(f"Impuestos: RD${self.calcular_impuestos():.2f}")
         print(f"Total: RD${self.calcular_total():.2f}")
+
+class pos:
+    def __init__(self):
+        self.inventario = {}
+        self.facturas = []
+
+    def agregar_producto_inventario(self, Producto):
+        self.inventario[Producto.id] = Producto
+
+    def mostrar_menu(self):
+        print("Menú:")
+        for Id, producto in self.inventario.items():
+            print(f"{Id}. {producto.descripcion} -> RD${producto.precio} (stock: {producto.cantidad})")
+
+    def vender(self):
+        Carrito = Factura(input("Ingrese el nombre del cliente: "))
+        Continuar = True
+        while Continuar:
+            self.mostrar_menu()
+            id_producto = int(input("Ingrese el Id del producto: "))
+            if id_producto in self.inventario:
+                Producto = self.inventario[id_producto]
+                Cantidad = int(input(f"Ingrese la cantidad de {Producto.descripcion}: "))
+                if Cantidad > 0 and Cantidad <= Producto.cantidad:
+                    Carrito.agregar_producto(Producto, Cantidad)
+                    Producto.cantidad -= Cantidad
+                else:
+                    print("Cantidad no válida.")
+            else:
+                print("Id de producto no válido.")
+
+            Respuesta = input("¿Desea agregar otro producto? (s/n): ").strip().lower()
+            Continuar = (Respuesta == "s")
+        
+        Carrito.imprimir_factura()
+        self.facturas.append(Carrito)
