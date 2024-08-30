@@ -1,10 +1,18 @@
-productos = {
-    1: {"descripcion": "Arroz", "precio": 50},
-    2: {"descripcion": "Habichuelas", "precio": 80},
-    3: {"descripcion": "Aceite", "precio": 300},
-    4: {"descripcion": "Pollo", "precio": 85},
-    5: {"descripcion": "Lechuga", "precio": 80}
-}
+class producto:
+    def __init__(self, Id, Descripción, Precio, Cantidad, Impuesto):
+        self.id = Id
+        self.descripción = Descripción
+        self.precio = Precio
+        self.cantidad = Cantidad
+        self.impuesto = Impuesto
+
+def calcular_impuesto(self):
+    if self.impuesto == "01":
+        return self.precio * 0.18
+    elif self.impuesto == "02":
+        return self.precio * 0.16
+    else:
+        return 0
 
 carrito = []
 
