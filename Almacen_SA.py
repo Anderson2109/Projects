@@ -33,3 +33,19 @@ class Almacen:
         print("Items almacenados:")
         for item in self.items:
             print(f"  - {item.descripcion} (Área: {item.area} m2)")
+
+class item:
+    def __init__(self, id_item, descripcion, area):
+        self.id_item = id_item
+        self.descripcion = descripcion
+        self.area = area
+
+class empleado:
+    def __init__(self, nombre):
+        self.nombre = nombre
+    
+    def registrar_item(self, item, almacen):
+        almacen.agregar_item(item)
+
+    def retirar_item(self, item_id, almacen):
+        almacen.retirar_item(item_id)
