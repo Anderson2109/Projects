@@ -16,3 +16,12 @@ class Almacen:
             print(f"Item {item.descripcion} agregado al almacén {self.nombre}.")
         else:
             print(f"Capacidad insuficiente para el item {item.descripcion}.")
+
+    def retirar_item(self, item_id):
+        for item in self.items:
+            if item.id_item == item_id:
+                self.capacidad_disponible += item.area
+                self.items.remove(item)
+                print(f"Item {item.descripcion} retirado del almacén {self.nombre}.")
+                return
+        print(f"Item con id {item_id} no encontrado en el almacén {self.nombre}.")
