@@ -25,3 +25,11 @@ class Almacen:
                 print(f"Item {item.descripcion} retirado del almacén {self.nombre}.")
                 return
         print(f"Item con id {item_id} no encontrado en el almacén {self.nombre}.")
+
+    def mostrar_informacion(self):
+        print(f"Almacén: {self.nombre} (ID: {self.id_almacen})")
+        print(f"Capacidad total: {self.capacidad_total} m3")
+        print(f"Capacidad disponible: {self.capacidad_disponible} m3")
+        print("Items almacenados:")
+        for item in self.items:
+            print(f"  - {item.descripcion} (Área: {item.area} m2)")
