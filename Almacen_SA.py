@@ -1,3 +1,5 @@
+import os
+
 class Empleado:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -29,7 +31,6 @@ class Sistema_Gestion_Almacen:
     def __init__(self, empleado):
         self.empleado = empleado
         self.almacenes = []
-        self.items  = []
 
     def registrar_almacen(self):
         try:
@@ -42,7 +43,7 @@ class Sistema_Gestion_Almacen:
             self.almacenes.append(almacen)
             print("Almacén registrado exitosamente.")
         except ValueError:
-            print("Error, Asegúrese de ingresar valores numéricos correctos para altura, largura y anchura.")
+            print("Error, Asegúrese de ingresar valores numéricos correctos. ")
     
     def registrar_item(self, id_almacen, descripcion, area):
         almacen = self.buscar_almacen(id_almacen)
@@ -69,6 +70,18 @@ class Sistema_Gestion_Almacen:
                 print("Ítem no encontrado.")
         else:
             print("Almacén no encontrado.")
+
+    def buscar_almacen(self, id_almacen):
+        for almacen in self.almacenes:
+            if almacen.id == id_almacen:
+                return almacen
+            return None
+        
+    def buscar_item(self, almacen, id_item)
+        for item in almacen.items:
+            if item.id == id_items:
+                return item
+            return None
 
     def mostrar_almacenes(self):
         for almacen in self.almacenes:
