@@ -89,3 +89,20 @@ class Sistema_Gestion_Almacen:
 
     def limpiar_pantalla(self):
         os.system('cls' if os.name == 'nt' else 'clear')
+
+    def main():
+    nombre_empleado = input("Ingrese el nombre del empleado: ")
+    empleado = Empleado(nombre_empleado)
+    sistema = SistemaGestionAlmacenes(empleado)
+
+    while True:
+        sistema.limpiar_pantalla()
+        print("Sistema de Gestión de Almacenes")
+        print("1. Registrar Almacén")
+        print("2. Registrar Ítem")
+        print("3. Retirar Ítem")
+        print("4. Mostrar Almacenes")
+        print("5. Mostrar Ítems en un Almacén")
+        print("6. Salir")
+        
+        opcion = input("Seleccione una opción: ")
