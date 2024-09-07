@@ -77,9 +77,9 @@ class Sistema_Gestion_Almacen:
                 return almacen
             return None
         
-    def buscar_item(self, almacen, id_item)
+    def buscar_item(self, almacen, id_item):
         for item in almacen.items:
-            if item.id == id_items:
+            if item.id == id_item:
                 return item
             return None
 
@@ -87,13 +87,22 @@ class Sistema_Gestion_Almacen:
         for almacen in self.almacenes:
             print(f"ID: {almacen.id}, Nombre: {almacen.nombre}, Capacidad total: {almacen.capacidad_total} m³, Capacidad disponible: {almacen.capacidad_disponible()} m³")
 
+    def mostrar_items(self, id_almacen):
+        almacen = self.buscar_almacen(id_almacen)
+        if almacen:
+            print(f"Ítems en el almacén {almacen.nombre}:")
+            for item in almacen.items:
+                print(f"ID: {item.id}, Descripción: {item.descripcion}, Área: {item.area} m²")
+        else:
+            print("Almacén no encontrado.")
+
     def limpiar_pantalla(self):
         os.system('cls' if os.name == 'nt' else 'clear')
 
-    def main():
+def main():
     nombre_empleado = input("Ingrese el nombre del empleado: ")
     empleado = Empleado(nombre_empleado)
-    sistema = SistemaGestionAlmacenes(empleado)
+    sistema = Sistema_Gestion_Almacen(empleado)
 
     while True:
         sistema.limpiar_pantalla()
