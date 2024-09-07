@@ -106,3 +106,29 @@ class Sistema_Gestion_Almacen:
         print("6. Salir")
         
         opcion = input("Seleccione una opción: ")
+
+        if opcion == '1':
+            sistema.registrar_almacen()
+        elif opcion == '2':
+            id_almacen = int(input("Ingrese el ID del almacén: "))
+            descripcion = input("Ingrese la descripción del ítem: ")
+            area = float(input("Ingrese el área del ítem (en metros cuadrados): "))
+            sistema.registrar_item(id_almacen, descripcion, area)
+        elif opcion == '3':
+            id_almacen = int(input("Ingrese el ID del almacén: "))
+            id_item = int(input("Ingrese el ID del ítem: "))
+            sistema.retirar_item(id_almacen, id_item)
+        elif opcion == '4':
+            sistema.mostrar_almacenes()
+        elif opcion == '5':
+            id_almacen = int(input("Ingrese el ID del almacén: "))
+            sistema.mostrar_items(id_almacen)
+        elif opcion == '6':
+            break
+        else:
+            print("Opción no válida. Inténtelo de nuevo.")
+        
+        input("Presione Enter para continuar...")
+
+if __name__ == "__main__":
+    main()
