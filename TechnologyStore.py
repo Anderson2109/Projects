@@ -114,3 +114,32 @@ def apply_discount(product_id):
                 
     print("Producto no encontrado.")
     return None
+
+#Agregar descuento al producto
+def add_discount_to_product(product_id, discount_type, discount_value, description=None):
+    data = load_products()
+    for category in data:
+        for product in data[category]:
+            if product["id_producto"] == product_id:
+                product["descuento"] = {
+                    "tipo": discount_type,
+                    "valor": discount_value,
+                    "descripcion": description
+                }
+                save_products(data)
+                print(f"Descuento aplicado al producto {product_id}.")
+                return
+    print("Producto no encontrado.")
+
+#Ejemplo de uso de las funciones
+if __name__ == "__main__":
+
+    #Agregar un descuento porcentual a un producto
+    add_discount_to_product(101, "porcentual", 10)
+
+    #Agregar un descuento por cantidad fija a un producto
+    add_discount_to_product(102, "cantidad_fija", 50)
+
+    #Aplicar descuento al producto y mostrar precio final
+    final_price = apply_discount(101)
+    print(f"Precio final del producto con descuento: ${final_price}")
