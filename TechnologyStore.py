@@ -75,3 +75,42 @@ if __name__ == "__main__":
         print(f"Stock disponible para el producto ID 101: {stock}")
     else:
         print(f"Producto no encontrado.")
+
+#Aplicar descuento al producto
+def apply_discount(product_id):
+    data = load_products()
+    for category in data:
+        for product in data[category]:
+            if product["id_producto"] == product_id:
+
+                #Verificar si el producto tiene un descuento               
+                if "descuento" in product:
+                    discount = product["descuento"]
+                    original_price = product["precio"]
+
+                    #Si el descuento es porcentual
+                    if discount["tipo"] == "porcentual":
+                        discount_amount = original_price * (discount["valor"] / 100)
+                        final_price = original_price - discount_amount
+                        print(f"Descuento aplicado: {discount['valor']}%")
+                    
+                    #Si el descuento es una cantidad fija
+                    elif discount["tipo"] == "cantidad_fija":
+                        final_price = original_price - discount["valor"]
+                        print(f"Descuento aplicado: ${discount['valor']}")
+
+                    #Si el descuento es una oferta especial
+                    elif discount["tipo"] == "oferta":
+                        final_price = original_price
+                        print(f"Oferta especial aplicada: {discount['descripcion']}")
+
+                    #Asegurarse de que el precio final no sea menor a cero
+                    final_price = max(0, final_price)
+                    print(f"Precio final del producto: ${final_price}")
+                    return final_price
+                else:
+                    print("Este producto no tiene descuento.")
+                    return product["precio"]
+                
+    print("Producto no encontrado.")
+    return None
