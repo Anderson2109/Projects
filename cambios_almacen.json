@@ -1,0 +1,92 @@
+[
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 101, Cambio: -2"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 102, Cambio: -1"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 701, Cambio: -2"
+    },
+    {
+        "empleado": "admin",
+        "cambio": "Agreg\u00f3 producto Alero (ID 9531) en categor\u00eda 1."
+    },
+    {
+        "empleado": "admin",
+        "cambio": "Agreg\u00f3 producto manzana (ID 6294) en categor\u00eda 1."
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 101, Cambio: -7",
+        "fecha": "2024-09-13T22:06:30.445821"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 102, Cambio: -4",
+        "fecha": "2024-09-13T22:15:43.595163"
+    },
+    {
+        "empleado": "Sistema de devoluciones",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 102, Cambio: 2",
+        "fecha": "2024-09-13T22:19:00.202817"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 206, Cambio: -2",
+        "fecha": "2024-09-13T23:24:00.086744"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 210, Cambio: -3",
+        "fecha": "2024-09-13T23:24:00.092842"
+    },
+    {
+        "empleado": "admin",
+        "cambio": "Elimin\u00f3 producto ID 6294 de la categor\u00eda 1.",
+        "fecha": "2024-09-14T00:03:16.958537"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 9531, Cambio: -1",
+        "fecha": "2024-09-14T00:10:31.000082"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 102, Cambio: -2",
+        "fecha": "2024-09-14T01:08:14.481916"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 109, Cambio: -3",
+        "fecha": "2024-09-14T01:08:14.502143"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 301, Cambio: -3",
+        "fecha": "2024-09-14T01:13:07.294270"
+    },
+    {
+        "empleado": "Sistema de ventas",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 405, Cambio: -4",
+        "fecha": "2024-09-14T01:13:39.209634"
+    },
+    {
+        "empleado": "admin",
+        "cambio": "Agreg\u00f3 producto mouse (ID 4045) en categor\u00eda 1.",
+        "fecha": "2024-09-14T01:27:19.883872"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Agreg\u00f3 producto teeclado (ID 1380) en categor\u00eda 1.",
+        "fecha": "2024-09-14T02:48:51.028930"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Actualizaci\u00f3n de stock: Producto ID 1380, Cambio: -8",
+        "fecha": "2024-09-14T02:50:43.496457"
+    }
+]

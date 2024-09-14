@@ -1,0 +1,94 @@
+[
+    {
+        "id_cliente": 1000,
+        "nombre_cliente": "Abi",
+        "productos": [
+            {
+                "id_producto": 102,
+                "cantidad": 2
+            },
+            {
+                "id_producto": 109,
+                "cantidad": 3
+            }
+        ],
+        "total": 2550,
+        "fecha": "2024-09-14T01:08:14.413805"
+    },
+    {
+        "id_cliente": 1001,
+        "nombre_cliente": "Manolo",
+        "productos": [
+            {
+                "id_producto": 301,
+                "cantidad": 3
+            }
+        ],
+        "total": 450,
+        "fecha": "2024-09-14T01:13:07.252519"
+    },
+    {
+        "id_cliente": 1002,
+        "nombre_cliente": "Carlos",
+        "productos": [
+            {
+                "id_producto": 405,
+                "cantidad": 4
+            }
+        ],
+        "total": 120,
+        "fecha": "2024-09-14T01:13:39.164138"
+    },
+    {
+        "id_cliente": 1003,
+        "nombre_cliente": "Pedro",
+        "productos": [
+            {
+                "id_producto": 107,
+                "cantidad": 2
+            }
+        ],
+        "total": 1100,
+        "fecha": "2024-09-14T02:44:47.461581"
+    },
+    {
+        "id_cliente": 1004,
+        "nombre_cliente": "Richard",
+        "productos": [
+            {
+                "id_producto": 1380,
+                "cantidad": 8
+            }
+        ],
+        "total": 3200.0,
+        "fecha": "2024-09-14T02:50:43.452645"
+    },
+    {
+        "id_cliente": 1005,
+        "nombre_cliente": "Leo",
+        "productos": [
+            {
+                "id_producto": 609,
+                "cantidad": 2
+            }
+        ],
+        "total": 1100,
+        "fecha": "2024-09-14T03:02:13.002029"
+    },
+    {
+        "id_cliente": 1006,
+        "nombre_cliente": "Alvida",
+        "productos": [
+            {
+                "id_producto": 703,
+                "cantidad": 5
+            },
+            {
+                "id_producto": 308,
+                "cantidad": 5
+            }
+        ],
+        "total": 1350,
+        "fecha": "2024-09-14T03:07:00.255725"
+    }
+]

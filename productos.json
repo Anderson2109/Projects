@@ -1,0 +1,787 @@
+{
+    "computadoras": [
+        {
+            "id_producto": 101,
+            "nombre": "Pc Gaming",
+            "precio": 1200,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "1TB SSD"
+            ],
+            "cantidad_disponible": 1
+        },
+        {
+            "id_producto": 102,
+            "nombre": "Pc de Oficina",
+            "precio": 600,
+            "caracteristicas": [
+                "Intel i5",
+                "8GB RAM",
+                "500GB HDD"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 103,
+            "nombre": "Pc Todo en Uno",
+            "precio": 900,
+            "caracteristicas": [
+                "Intel i5",
+                "8GB RAM",
+                "1TB HDD"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 104,
+            "nombre": "Pc Estaci\u00c3\u00b3n de Trabajo",
+            "precio": 1500,
+            "caracteristicas": [
+                "Intel Xeon",
+                "32GB RAM",
+                "2TB SSD"
+            ],
+            "cantidad_disponible": 5
+        },
+        {
+            "id_producto": 105,
+            "nombre": "Pc Mini",
+            "precio": 500,
+            "caracteristicas": [
+                "Intel Celeron",
+                "4GB RAM",
+                "128GB SSD"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 106,
+            "nombre": "Pc para Gaming Avanzado",
+            "precio": 2000,
+            "caracteristicas": [
+                "Intel i9",
+                "32GB RAM",
+                "1TB SSD",
+                "RTX 3080"
+            ],
+            "cantidad_disponible": 7
+        },
+        {
+            "id_producto": 107,
+            "nombre": "Pc de Escritorio Compacta",
+            "precio": 550,
+            "caracteristicas": [
+                "Intel i3",
+                "4GB RAM",
+                "256GB SSD"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 108,
+            "nombre": "Pc con Monitor Curvo",
+            "precio": 1300,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "1TB SSD",
+                "Monitor 27\""
+            ],
+            "cantidad_disponible": 6
+        },
+        {
+            "id_producto": 109,
+            "nombre": "Pc para Estudio",
+            "precio": 450,
+            "caracteristicas": [
+                "Intel Pentium",
+                "4GB RAM",
+                "500GB HDD"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 110,
+            "nombre": "Pc para Dise\u00c3\u00b1o Gr\u00c3\u00a1fico",
+            "precio": 1700,
+            "caracteristicas": [
+                "Intel i7",
+                "32GB RAM",
+                "1TB SSD",
+                "RTX 3070"
+            ],
+            "cantidad_disponible": 9
+        }
+    ],
+    "laptops": [
+        {
+            "id_producto": 201,
+            "nombre": "Laptop Ultrabook",
+            "precio": 900,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "512GB SSD"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 202,
+            "nombre": "Laptop de Estudio",
+            "precio": 700,
+            "caracteristicas": [
+                "Intel i5",
+                "8GB RAM",
+                "256GB SSD"
+            ],
+            "cantidad_disponible": 12
+        },
+        {
+            "id_producto": 203,
+            "nombre": "Laptop Gaming",
+            "precio": 1200,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "1TB SSD",
+                "RTX 2060"
+            ],
+            "cantidad_disponible": 5
+        },
+        {
+            "id_producto": 204,
+            "nombre": "Laptop Convertible",
+            "precio": 850,
+            "caracteristicas": [
+                "Intel i5",
+                "8GB RAM",
+                "128GB SSD",
+                "Pantalla t\u00c3\u00a1ctil"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 205,
+            "nombre": "Laptop de Negocios",
+            "precio": 950,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "256GB SSD"
+            ],
+            "cantidad_disponible": 7
+        },
+        {
+            "id_producto": 206,
+            "nombre": "Laptop para Programadores",
+            "precio": 1100,
+            "caracteristicas": [
+                "Intel i7",
+                "32GB RAM",
+                "1TB SSD"
+            ],
+            "cantidad_disponible": 4
+        },
+        {
+            "id_producto": 207,
+            "nombre": "Laptop de Bajo Costo",
+            "precio": 500,
+            "caracteristicas": [
+                "Intel Celeron",
+                "4GB RAM",
+                "64GB SSD"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 208,
+            "nombre": "Laptop para Estudiantes",
+            "precio": 600,
+            "caracteristicas": [
+                "Intel i3",
+                "4GB RAM",
+                "128GB SSD"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 209,
+            "nombre": "Laptop con Pantalla 4K",
+            "precio": 1300,
+            "caracteristicas": [
+                "Intel i7",
+                "16GB RAM",
+                "512GB SSD",
+                "Pantalla 4K"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 210,
+            "nombre": "Laptop Ultra Liviana",
+            "precio": 700,
+            "caracteristicas": [
+                "Intel i5",
+                "8GB RAM",
+                "256GB SSD"
+            ],
+            "cantidad_disponible": 8
+        }
+    ],
+    "oficina": [
+        {
+            "id_producto": 301,
+            "nombre": "Impresora Multifuncional",
+            "precio": 150,
+            "caracteristicas": [
+                "Blanco y negro",
+                "Conectividad WiFi"
+            ],
+            "cantidad_disponible": 17
+        },
+        {
+            "id_producto": 302,
+            "nombre": "Esc\u00c3\u00a1ner de Documentos",
+            "precio": 100,
+            "caracteristicas": [
+                "Conectividad USB",
+                "Resoluci\u00c3\u00b3n 600dpi"
+            ],
+            "cantidad_disponible": 25
+        },
+        {
+            "id_producto": 303,
+            "nombre": "Silla de Oficina Ergon\u00c3\u00b3mica",
+            "precio": 200,
+            "caracteristicas": [
+                "Ajustable",
+                "Revestimiento de cuero"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 304,
+            "nombre": "Escritorio de Oficina",
+            "precio": 250,
+            "caracteristicas": [
+                "Madera",
+                "3 cajones"
+            ],
+            "cantidad_disponible": 12
+        },
+        {
+            "id_producto": 305,
+            "nombre": "Lampara de Escritorio LED",
+            "precio": 50,
+            "caracteristicas": [
+                "Ajustable",
+                "Luz regulable"
+            ],
+            "cantidad_disponible": 30
+        },
+        {
+            "id_producto": 306,
+            "nombre": "Ca\u00c3\u00b1\u00c3\u00b3n Proyector",
+            "precio": 400,
+            "caracteristicas": [
+                "Resoluci\u00c3\u00b3n HD",
+                "Conectividad HDMI"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 307,
+            "nombre": "Tablero Blanco",
+            "precio": 60,
+            "caracteristicas": [
+                "Marcador incluido",
+                "Tama\u00c3\u00b1o 120x90 cm"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 308,
+            "nombre": "Auriculares de Oficina",
+            "precio": 70,
+            "caracteristicas": [
+                "Con micr\u00c3\u00b3fono",
+                "Conectividad USB"
+            ],
+            "cantidad_disponible": 25
+        },
+        {
+            "id_producto": 309,
+            "nombre": "Archivador de Oficina",
+            "precio": 120,
+            "caracteristicas": [
+                "3 cajones",
+                "Metal"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 310,
+            "nombre": "Mueble de Almacenamiento",
+            "precio": 180,
+            "caracteristicas": [
+                "6 estantes",
+                "Madera"
+            ],
+            "cantidad_disponible": 15
+        }
+    ],
+    "almacenamiento": [
+        {
+            "id_producto": 401,
+            "nombre": "Disco Duro Externo 1TB",
+            "precio": 80,
+            "caracteristicas": [
+                "USB 3.0",
+                "Velocidad 5400 RPM"
+            ],
+            "cantidad_disponible": 30
+        },
+        {
+            "id_producto": 402,
+            "nombre": "Pendrive 64GB",
+            "precio": 20,
+            "caracteristicas": [
+                "USB 3.0",
+                "Lectura r\u00c3\u00a1pida"
+            ],
+            "cantidad_disponible": 50
+        },
+        {
+            "id_producto": 403,
+            "nombre": "SSD 512GB",
+            "precio": 120,
+            "caracteristicas": [
+                "SATA III",
+                "Velocidad 550 MB/s"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 404,
+            "nombre": "HDD Externo 2TB",
+            "precio": 100,
+            "caracteristicas": [
+                "USB 3.0",
+                "Velocidad 7200 RPM"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 405,
+            "nombre": "Tarjeta SD 128GB",
+            "precio": 30,
+            "caracteristicas": [
+                "Clase 10",
+                "Lectura 95 MB/s"
+            ],
+            "cantidad_disponible": 36
+        },
+        {
+            "id_producto": 406,
+            "nombre": "Disco Duro Interno 4TB",
+            "precio": 150,
+            "caracteristicas": [
+                "SATA III",
+                "Velocidad 5400 RPM"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 407,
+            "nombre": "Pendrive 32GB",
+            "precio": 15,
+            "caracteristicas": [
+                "USB 2.0",
+                "Velocidad media"
+            ],
+            "cantidad_disponible": 60
+        },
+        {
+            "id_producto": 408,
+            "nombre": "SSD Externo 1TB",
+            "precio": 200,
+            "caracteristicas": [
+                "USB 3.1",
+                "Velocidad 1000 MB/s"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 409,
+            "nombre": "Tarjeta SD 64GB",
+            "precio": 25,
+            "caracteristicas": [
+                "Clase 10",
+                "Lectura 80 MB/s"
+            ],
+            "cantidad_disponible": 35
+        },
+        {
+            "id_producto": 410,
+            "nombre": "Disco Duro Externo 500GB",
+            "precio": 60,
+            "caracteristicas": [
+                "USB 3.0",
+                "Velocidad 5400 RPM"
+            ],
+            "cantidad_disponible": 25
+        }
+    ],
+    "imagenes_sonido": [
+        {
+            "id_producto": 501,
+            "nombre": "C\u00c3\u00a1mara Web Full HD",
+            "precio": 90,
+            "caracteristicas": [
+                "Resoluci\u00c3\u00b3n 1080p",
+                "Micr\u00c3\u00b3fono integrado"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 502,
+            "nombre": "Auriculares Bluetooth",
+            "precio": 70,
+            "caracteristicas": [
+                "Sonido est\u00c3\u00a9reo",
+                "Hasta 10 horas de bater\u00c3\u00ada"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 503,
+            "nombre": "Altavoces Bluetooth",
+            "precio": 100,
+            "caracteristicas": [
+                "Sonido 360 grados",
+                "Duraci\u00c3\u00b3n de bater\u00c3\u00ada 12 horas"
+            ],
+            "cantidad_disponible": 12
+        },
+        {
+            "id_producto": 504,
+            "nombre": "Micr\u00c3\u00b3fono USB",
+            "precio": 60,
+            "caracteristicas": [
+                "Calidad de estudio",
+                "Con filtro antipop"
+            ],
+            "cantidad_disponible": 18
+        },
+        {
+            "id_producto": 505,
+            "nombre": "Webcam HD 720p",
+            "precio": 50,
+            "caracteristicas": [
+                "Resoluci\u00c3\u00b3n 720p",
+                "Compatible con Windows"
+            ],
+            "cantidad_disponible": 25
+        },
+        {
+            "id_producto": 506,
+            "nombre": "Auriculares Gaming",
+            "precio": 90,
+            "caracteristicas": [
+                "Sonido envolvente",
+                "Micr\u00c3\u00b3fono ajustable"
+            ],
+            "cantidad_disponible": 14
+        },
+        {
+            "id_producto": 507,
+            "nombre": "Parlantes para PC",
+            "precio": 80,
+            "caracteristicas": [
+                "Sonido est\u00c3\u00a9reo",
+                "Control de volumen"
+            ],
+            "cantidad_disponible": 22
+        },
+        {
+            "id_producto": 508,
+            "nombre": "C\u00c3\u00a1mara de Seguridad IP",
+            "precio": 120,
+            "caracteristicas": [
+                "Resoluci\u00c3\u00b3n 1080p",
+                "Visi\u00c3\u00b3n nocturna"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 509,
+            "nombre": "Auriculares In-Ear",
+            "precio": 40,
+            "caracteristicas": [
+                "Sonido claro",
+                "Control de micr\u00c3\u00b3fono"
+            ],
+            "cantidad_disponible": 30
+        },
+        {
+            "id_producto": 510,
+            "nombre": "Micr\u00c3\u00b3fono de Solapa",
+            "precio": 55,
+            "caracteristicas": [
+                "Micr\u00c3\u00b3fono de alta sensibilidad",
+                "Clip incluido"
+            ],
+            "cantidad_disponible": 20
+        }
+    ],
+    "celulares": [
+        {
+            "id_producto": 601,
+            "nombre": "Smartphone X1",
+            "precio": 500,
+            "caracteristicas": [
+                "Pantalla 6.5\"",
+                "64GB almacenamiento",
+                "C\u00c3\u00a1mara 12MP"
+            ],
+            "cantidad_disponible": 25
+        },
+        {
+            "id_producto": 602,
+            "nombre": "Smartphone Y2",
+            "precio": 350,
+            "caracteristicas": [
+                "Pantalla 6.0\"",
+                "32GB almacenamiento",
+                "C\u00c3\u00a1mara 8MP"
+            ],
+            "cantidad_disponible": 30
+        },
+        {
+            "id_producto": 603,
+            "nombre": "Smartphone Z3",
+            "precio": 600,
+            "caracteristicas": [
+                "Pantalla 6.7\"",
+                "128GB almacenamiento",
+                "C\u00c3\u00a1mara 48MP"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 604,
+            "nombre": "Smartphone A4",
+            "precio": 400,
+            "caracteristicas": [
+                "Pantalla 6.4\"",
+                "64GB almacenamiento",
+                "C\u00c3\u00a1mara 16MP"
+            ],
+            "cantidad_disponible": 18
+        },
+        {
+            "id_producto": 605,
+            "nombre": "Smartphone B5",
+            "precio": 450,
+            "caracteristicas": [
+                "Pantalla 6.3\"",
+                "128GB almacenamiento",
+                "C\u00c3\u00a1mara 12MP"
+            ],
+            "cantidad_disponible": 22
+        },
+        {
+            "id_producto": 606,
+            "nombre": "Smartphone C6",
+            "precio": 550,
+            "caracteristicas": [
+                "Pantalla 6.5\"",
+                "256GB almacenamiento",
+                "C\u00c3\u00a1mara 64MP"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 607,
+            "nombre": "Smartphone D7",
+            "precio": 300,
+            "caracteristicas": [
+                "Pantalla 6.0\"",
+                "32GB almacenamiento",
+                "C\u00c3\u00a1mara 8MP"
+            ],
+            "cantidad_disponible": 35
+        },
+        {
+            "id_producto": 608,
+            "nombre": "Smartphone E8",
+            "precio": 700,
+            "caracteristicas": [
+                "Pantalla 6.7\"",
+                "256GB almacenamiento",
+                "C\u00c3\u00a1mara 108MP"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 609,
+            "nombre": "Smartphone F9",
+            "precio": 550,
+            "caracteristicas": [
+                "Pantalla 6.4\"",
+                "128GB almacenamiento",
+                "C\u00c3\u00a1mara 48MP"
+            ],
+            "cantidad_disponible": 17
+        },
+        {
+            "id_producto": 610,
+            "nombre": "Smartphone G10",
+            "precio": 800,
+            "caracteristicas": [
+                "Pantalla 6.8\"",
+                "512GB almacenamiento",
+                "C\u00c3\u00a1mara 108MP"
+            ],
+            "cantidad_disponible": 8
+        }
+    ],
+    "tablets": [
+        {
+            "id_producto": 701,
+            "nombre": "Tablet Pro 10\"",
+            "precio": 400,
+            "caracteristicas": [
+                "Pantalla 10\"",
+                "128GB almacenamiento",
+                "Procesador Octa-core"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 702,
+            "nombre": "Tablet Mini 7\"",
+            "precio": 250,
+            "caracteristicas": [
+                "Pantalla 7\"",
+                "32GB almacenamiento",
+                "Procesador Quad-core"
+            ],
+            "cantidad_disponible": 18
+        },
+        {
+            "id_producto": 703,
+            "nombre": "Tablet para Estudiantes",
+            "precio": 200,
+            "caracteristicas": [
+                "Pantalla 8\"",
+                "16GB almacenamiento",
+                "Procesador Dual-core"
+            ],
+            "cantidad_disponible": 20
+        },
+        {
+            "id_producto": 704,
+            "nombre": "Tablet de Alta Gama",
+            "precio": 600,
+            "caracteristicas": [
+                "Pantalla 11\"",
+                "256GB almacenamiento",
+                "Procesador Octa-core"
+            ],
+            "cantidad_disponible": 10
+        },
+        {
+            "id_producto": 705,
+            "nombre": "Tablet 4G LTE",
+            "precio": 350,
+            "caracteristicas": [
+                "Pantalla 10\"",
+                "64GB almacenamiento",
+                "Conectividad 4G"
+            ],
+            "cantidad_disponible": 15
+        },
+        {
+            "id_producto": 706,
+            "nombre": "Tablet para Profesionales",
+            "precio": 500,
+            "caracteristicas": [
+                "Pantalla 12\"",
+                "128GB almacenamiento",
+                "Procesador Octa-core"
+            ],
+            "cantidad_disponible": 8
+        },
+        {
+            "id_producto": 707,
+            "nombre": "Tablet con Teclado",
+            "precio": 450,
+            "caracteristicas": [
+                "Pantalla 10\"",
+                "64GB almacenamiento",
+                "Teclado incluido"
+            ],
+            "cantidad_disponible": 12
+        },
+        {
+            "id_producto": 708,
+            "nombre": "Tablet de Entretenimiento",
+            "precio": 300,
+            "caracteristicas": [
+                "Pantalla 10\"",
+                "32GB almacenamiento",
+                "Altavoces est\u00c3\u00a9reo"
+            ],
+            "cantidad_disponible": 25
+        },
+        {
+            "id_producto": 709,
+            "nombre": "Tablet 8\" HD",
+            "precio": 220,
+            "caracteristicas": [
+                "Pantalla 8\"",
+                "32GB almacenamiento",
+                "Procesador Quad-core"
+            ],
+            "cantidad_disponible": 18
+        },
+        {
+            "id_producto": 710,
+            "nombre": "Tablet con Dibujo",
+            "precio": 550,
+            "caracteristicas": [
+                "Pantalla 12\"",
+                "128GB almacenamiento",
+                "L\u00c3\u00a1piz \u00c3\u00b3ptico incluido"
+            ],
+            "cantidad_disponible": 10
+        }
+    ],
+    "1": [
+        {
+            "id_producto": 9531,
+            "nombre": "Alero",
+            "precio": 50000.0,
+            "caracteristicas": [
+                ""
+            ],
+            "cantidad_disponible": 1
+        },
+        {
+            "id_producto": 4045,
+            "nombre": "mouse",
+            "precio": 250.0,
+            "caracteristicas": "mouse,gamer",
+            "cantidad_disponible": 14
+        },
+        {
+            "id_producto": 1380,
+            "nombre": "teeclado",
+            "precio": 400.0,
+            "caracteristicas": "9",
+            "cantidad_disponible": 1
+        }
+    ]
+}
