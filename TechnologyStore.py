@@ -92,7 +92,7 @@ class Store:
         else:
             print("Categoría no encontrada.")
 
-    # Agregar productos (desde el almacén)
+    # Agregar producto (desde el almacén)
     def add_product(self, category, name, price, characteristics, quantity):
         if not name or price <= 0 or quantity < 0:
             print("Entrada inválida. Asegúrese de que el nombre no esté vacío, el precio y la cantidad sean válidos.")
@@ -112,25 +112,44 @@ class Store:
     def delete_product(self, category, product_id):
         clear_screen()  # Limpiar pantalla antes de eliminar producto
         if category in self.products:
+            original_length = len(self.products[category])
             self.products[category] = [prod for prod in self.products[category] if prod.id_producto != product_id]
-            self.save_products()
-            print(f"Producto ID {product_id} eliminado exitosamente.")
-            if self.user_session:  # Solo registrar cambio si hay sesión
-                self.log_change(self.user_session['nombre'], f"Eliminó producto ID {product_id} de la categoría {category}.")
+            if len(self.products[category]) < original_length:
+                self.save_products()
+                print(f"Producto ID {product_id} eliminado exitosamente.")
+                if self.user_session:  # Solo registrar cambio si hay sesión
+                    self.log_change(self.user_session['nombre'], f"Eliminó producto ID {product_id} de la categoría {category}.")
+            else:
+                print("Producto no encontrado en la categoría.")
         else:
             print("Categoría no encontrada.")
 
-    # Eliminar categoría
-    def delete_category(self, category):
+    # Eliminar categoría por ID
+    def delete_category(self, category_id):
         clear_screen()  # Limpiar pantalla antes de eliminar categoría
-        if category in self.products:
+        if 1 <= category_id <= len(self.categories):
+            category = self.categories[category_id - 1]
             del self.products[category]
+            self.categories.remove(category)
             self.save_products()
             print(f"Categoría {category} eliminada exitosamente.")
             if self.user_session:  # Solo registrar cambio si hay sesión
                 self.log_change(self.user_session['nombre'], f"Eliminó la categoría {category}.")
         else:
-            print("Categoría no encontrada.")
+            print("ID de categoría no válido.")
+
+    # Agregar categoría
+    def add_category(self, category_name):
+        category_name = category_name.lower()
+        if category_name in self.products:
+            print("La categoría ya existe.")
+            return
+        self.products[category_name] = []  # Crear una nueva lista para productos en la nueva categoría
+        self.categories.append(category_name)
+        self.save_products()
+        print(f"Categoría '{category_name}' agregada exitosamente.")
+        if self.user_session:  # Solo registrar cambio si hay sesión
+            self.log_change(self.user_session['nombre'], f"Agregó la categoría '{category_name}'.")
 
     # Actualizar stock
     def update_stock(self, product_id, quantity_change):
@@ -189,13 +208,13 @@ class Store:
             "nombre_cliente": client_name,
             "productos": products,
             "total": total,
-            "fecha": datetime.now().isoformat()  # Fecha y hora de la venta
+            "fecha": datetime.now().isoformat()
         }
         self.sales.append(sale)
         self.save_sales()
-        print(f"Venta registrada para el cliente {client_name} con ID {client_id}.")
         for product in products:
             self.update_stock(product["id_producto"], -product["cantidad"])
+        print(f"Venta registrada exitosamente. ID de Cliente: {client_id}")
         self.show_invoice(sale)  # Mostrar factura
 
     # Mostrar factura
@@ -292,7 +311,8 @@ def main():
                 print("2. Agregar Producto")
                 print("3. Eliminar Producto")
                 print("4. Eliminar Categoría")
-                print("5. Volver al Menú Principal")
+                print("5. Agregar Categoría")
+                print("6. Volver al Menú Principal")
 
                 product_choice = input("Seleccione una opción: ")
 
@@ -322,12 +342,17 @@ def main():
                         print("Categoría no válida.")
                         continue
                     category = store.categories[category_id].lower()
+                    store.show_products_by_category(category)
                     product_id = int(input("Ingrese el ID del producto a eliminar: "))
                     store.delete_product(category, product_id)
                 elif product_choice == "4":
-                    category = input("Ingrese la categoría a eliminar: ").lower()
-                    store.delete_category(category)
+                    store.show_categories_with_id()
+                    category_id = int(input("Ingrese el ID de la categoría a eliminar: ")) - 1
+                    store.delete_category(category_id + 1)
                 elif product_choice == "5":
+                    category_name = input("Ingrese el nombre de la nueva categoría: ").lower()
+                    store.add_category(category_name)
+                elif product_choice == "6":
                     break
                 else:
                     print("Opción no válida. Intente nuevamente.")

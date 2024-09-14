@@ -88,5 +88,25 @@
         "empleado": "Administrador",
         "cambio": "Actualizaci\u00f3n de stock: Producto ID 1380, Cambio: -8",
         "fecha": "2024-09-14T02:50:43.496457"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Agreg\u00f3 la categor\u00eda '2'.",
+        "fecha": "2024-09-14T03:16:35.190811"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Agreg\u00f3 producto miel (ID 8466) en categor\u00eda 2.",
+        "fecha": "2024-09-14T03:17:13.405094"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Elimin\u00f3 la categor\u00eda 2.",
+        "fecha": "2024-09-14T03:18:11.831823"
+    },
+    {
+        "empleado": "Administrador",
+        "cambio": "Elimin\u00f3 producto ID 1380 de la categor\u00eda 1.",
+        "fecha": "2024-09-14T03:24:58.054686"
     }
 ]

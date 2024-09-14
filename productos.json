@@ -775,13 +775,6 @@
             "precio": 250.0,
             "caracteristicas": "mouse,gamer",
             "cantidad_disponible": 14
-        },
-        {
-            "id_producto": 1380,
-            "nombre": "teeclado",
-            "precio": 400.0,
-            "caracteristicas": "9",
-            "cantidad_disponible": 1
         }
     ]
 }
